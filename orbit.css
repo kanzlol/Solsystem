@@ -94,7 +94,7 @@ html, body {
     left: 50%;
     margin-top: -300px;
     margin-left: -300px;
-    z-index: 4;
+    z-index: 0;
     
     width: 600px;
     height: 700px;
@@ -111,8 +111,8 @@ html, body {
 }
 
 #earth {
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     position: absolute;
     top: 50%;
     left: 0;
@@ -123,7 +123,42 @@ html, body {
     -moz-animation: spin 3s linear infinite;
     -o-animation: spin 3s linear infinite;
     animation: spin 3s linear infinite;
+}
+#mars {
+    height: 30px;
+    width: 30px;
+    background: red;
+    background: -webkit-radial-gradient(#911717, #b21a1a);
+    background: -moz-radial-gradient(#911717, #b21a1a);
+    background: -o-radial-gradient(#911717, #b21a1a);
+    background: radial-gradient(#911717, #b21a1a);
+
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+
+    -webkit-animation: spin 3s linear infinite;
+    -moz-animation: spin 3s linear infinite;
+    -o-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+#marsorbit {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    margin-top: -350px;
+    margin-left: -350px;
+    z-index: 4;
     
+    width: 600px;
+    height: 700px;
+    
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+
 }
 #moonorbit {
     
@@ -140,10 +175,10 @@ html, body {
     -o-border-radius: 100%;
     border-radius: 100%;
     
-    -webkit-animation: spin 4s linear infinite reverse;
-    -moz-animation: spin 4s linear infinite reverse;
-    -o-animation: spin 4s linear infinite reverse;
-    animation: spin 4s linear infinite reverse;
+    -webkit-animation: spin 10s linear infinite reverse;
+    -moz-animation: spin 10s linear infinite reverse;
+    -o-animation: spin 10s linear infinite reverse;
+    animation: spin 10s linear infinite reverse;
 }
 #moon {
     height: 20px;
