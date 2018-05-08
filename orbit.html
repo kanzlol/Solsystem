@@ -5,6 +5,7 @@
     <head>
         <title>Orbit Animation</title>
         <!-- Normalize css -->
+
         <link rel="stylesheet" type="text/css" href="normalize.css">
         <!-- Custom css -->
         <link rel="stylesheet" type="text/css" href="orbit.css">
@@ -12,18 +13,39 @@
         <!--[if IE]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+        <script src="jquery-3.2.1.js"></script>
     </head>
 
-    <body id="universe">
-        <div id="stars"></div>
-        <div id="sun"></div>
-        <div id="earthorbit">
-            <img id="earth" src="img/earth.png" alt="Earth">
-            <div id="moonorbit">
-                <div id="moon"></div>
+    <body>
+        <div class="stars">
+            <script>
+                var siteWidth = $(window).width();
+                for (i = 0; i <= 100; i++) {
+                  var start = $('<div>')
+                  .addClass('star star_'+i)
+                  .css({
+                    top: Math.floor(Math.random()*1000),
+                    left: Math.floor(Math.random()*siteWidth)
+                  })
+                  .appendTo('.stars');
+                }
+            </script>
+        </div>
+        <div id="sun">
+            <div id="earthorbit">
+                <img id="earth" src="img/earth.png" alt="Earth">
+                    <div id="moonorbit">
+                        <div id="moon"></div>
+                    </div>
             </div>
             <div id="marsorbit">
                 <div id="mars"></div>
+            </div>
+            <div id="mercuryorbit">
+                <div id="mercury"></div>
+            </div>
+            <div id="venusorbit">
+                <div id="venus"></div>
             </div>
         </div>
         
