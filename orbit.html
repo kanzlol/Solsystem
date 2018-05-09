@@ -20,11 +20,11 @@
         <div class="stars">
             <script>
                 var siteWidth = $(window).width();
-                for (i = 0; i <= 100; i++) {
+                for (i = 0; i <= 1000; i++) {
                   var start = $('<div>')
                   .addClass('star star_'+i)
                   .css({
-                    top: Math.floor(Math.random()*1000),
+                    top: Math.floor(Math.random()*10000),
                     left: Math.floor(Math.random()*siteWidth)
                   })
                   .appendTo('.stars');
@@ -32,8 +32,14 @@
             </script>
         </div>
         <div id="sun">
+            <div id="mercuryorbit">
+                <div id="mercury"></div>
+            </div>
+            <div id="venusorbit">
+                <div id="venus"></div>
+            </div>
             <div id="earthorbit">
-                <img id="earth" src="img/earth.png" alt="Earth">
+                <div id="earth"></div>
                     <div id="moonorbit">
                         <div id="moon"></div>
                     </div>
@@ -41,11 +47,17 @@
             <div id="marsorbit">
                 <div id="mars"></div>
             </div>
-            <div id="mercuryorbit">
-                <div id="mercury"></div>
+            <div id="jupiterorbit">
+                <div id="jupiter"></div>
             </div>
-            <div id="venusorbit">
-                <div id="venus"></div>
+            <div id="saturnorbit">
+                <div id="saturn">
+                    <div class="ring"></div>
+                    <div class="ring-after"></div>
+                </div>
+            </div>
+            <div id="uranusorbit">
+                <div id="uranus"></div>
             </div>
         </div>
         
