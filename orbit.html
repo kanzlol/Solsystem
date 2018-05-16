@@ -4,63 +4,137 @@
     
     <head>
         <title>Orbit Animation</title>
-        <!-- Normalize css -->
-
-        <link rel="stylesheet" type="text/css" href="normalize.css">
-        <!-- Custom css -->
+        <!-- CSS -->
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="orbit.css">
-        <!-- HTML5 in IE -->
-        <!--[if IE]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        <script src="jquery-3.2.1.js"></script>
     </head>
 
     <body>
-        <div class="stars">
-            <script>
-                var siteWidth = $(window).width();
-                for (i = 0; i <= 1000; i++) {
-                  var start = $('<div>')
-                  .addClass('star star_'+i)
-                  .css({
-                    top: Math.floor(Math.random()*10000),
-                    left: Math.floor(Math.random()*siteWidth)
-                  })
-                  .appendTo('.stars');
-                }
-            </script>
+        <!-- Description -->
+        <div class="description">
+            <h1>Solsystem</h1>
+            <hr>
+            <p>Kredsløb rundt om solen i reél tid.</p>
+            <p>30 sekunder = 1 år.</p>
         </div>
+
+        <!-- Planetary info -->
+        <div id="sunInfo" style="display: none;">
+            <div class="infos">
+                <h1>Solen</h1>
+                <hr>
+                <p>1234567890</p>
+            </div>
+        </div>
+        <div id="mercuryInfo" style="display: none;">
+            <div class="infos">
+                <h1>Merkur</h1>
+                <hr>
+                <p>1234567890</p>
+            </div>
+        </div>
+        <div id="venusInfo" style="display: none;">
+            <div class="infos">
+                <h1>Venus</h1>
+                <hr>
+                <p>1234567890</p>
+            </div>
+        </div>
+        <div id="earthInfo" style="display: none;">
+            <div class="infos">
+                <h1>Jorden</h1>
+                <hr>
+                <p>1234567890</p>
+            </div>
+        </div>
+        <div id="marsInfo" style="display: none;">
+            <div class="infos">
+                <h1>Mars</h1>
+                <hr>
+                <p>1234567890</p>
+            </div>
+        </div>
+        <div id="jupiterInfo" style="display: none;">
+            <div class="infos">
+                <h1>Jupiter</h1>
+                <hr>
+                <p>1234567890</p>
+            </div>
+        </div>
+        <div id="saturnInfo" style="display: none;">
+            <div class="infos">
+                <h1>Saturn</h1>
+                <hr>
+                <p>1234567890</p>
+            </div>
+        </div>
+        <div id="uranusInfo" style="display: none;">
+            <div class="infos">
+                <h1>Uranus</h1>
+                <hr>
+                <p>1234567890</p>
+            </div>
+        </div>
+        <div id="neptuneInfo" style="display: none;">
+            <div class="infos">
+                <h1>Neptun</h1>
+                <hr>
+                <p>1234567890</p>
+            </div>
+        </div> 
+
+        <!-- SOLAR SYSTEM -->
+
+        <div class="stars"></div>
         <div id="sun">
-            <div id="mercuryorbit">
+            <div id="mercuryOrbit">
                 <div id="mercury"></div>
             </div>
-            <div id="venusorbit">
+            <div id="venusOrbit">
                 <div id="venus"></div>
             </div>
-            <div id="earthorbit">
+            <div id="earthOrbit">
                 <div id="earth"></div>
-                    <div id="moonorbit">
-                        <div id="moon"></div>
-                    </div>
+                <div id="moonOrbit">
+                    <div id="moon"></div>
+                 </div>
             </div>
-            <div id="marsorbit">
+            <div id="marsOrbit">
                 <div id="mars"></div>
             </div>
-            <div id="jupiterorbit">
+            <div id="jupiterOrbit">
                 <div id="jupiter"></div>
             </div>
-            <div id="saturnorbit">
+            <div id="saturnOrbit">
                 <div id="saturn">
                     <div class="ring"></div>
                     <div class="ring-after"></div>
                 </div>
             </div>
-            <div id="uranusorbit">
+            <div id="uranusOrbit">
                 <div id="uranus"></div>
             </div>
+            <div id="neptuneOrbit">
+                <div id="neptune"></div>
+            </div>
         </div>
-        
+
+        <!-- Nav -->
+
+        <div id="navbar">
+            <a class="sun" title="sun" href="#">Solen</a>
+            <a class="mercury" title="mercury" href="#">Merkur</a>
+            <a class="venus" title="venus" href="#">Venus</a>
+            <a class="earth" title="earth" href="#">Jorden</a>
+            <a class="mars" title="mars" href="#">Mars</a>
+            <a class="jupiter" title="jupiter" href="#">Jupiter</a>
+            <a class="saturn" title="saturn" href="#">Saturn</a>
+            <a class="uranus" title="uranus" href="#">Uranus</a>
+            <a class="neptune" title="neptune" href="#">Neptun</a>
+        </div>
+        <!-- JS -->
+        <script src="jquery-3.2.1.js"></script>
+        <script src="script.js"></script>
     </body>
 
 </html>
