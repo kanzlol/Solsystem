@@ -100,26 +100,7 @@ p {
     display: inline-block;
 }
 
-/*.textBubble {
-    position: fixed;
-    height: 50px;
-    background: transparent;
-    color: #FFF;
-    margin-left: 78px;
-    margin-top: -110px;
-    width: 150px;
-    border-bottom: 3px solid rgba(255, 255, 255, 1);
-}
-
-.textBubble:after {
-    background: rgba(255, 255, 255, 1);
-    content: "";
-    height: 3px;
-    margin: 4px 0 0 -37px;
-    position: absolute;
-    transform: rotateZ(120deg);
-    width: 50px;
-}*/
+    /* Animationer */
 
 @keyframes starpulse, @-webkit-keyframes starpulse, @-moz-keyframes starpulse, @-o-keyframes starpulse {
     from { opacity: 1; }
@@ -159,17 +140,6 @@ p {
     }
 }
 
-@keyframes spinTheOtherWay {
-    100% {
-    -webkit-transform: rotate(360deg);
-       -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-         -o-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-    }
-}
-
 @keyframes spin {
   100% {
     -webkit-transform: rotate(-360deg);
@@ -202,6 +172,8 @@ p {
     100% {opacity: 0.2;}
 }
 
+    /* Stjerner */
+
 .stars {
   width: 100%;
   height: 100%;
@@ -226,6 +198,8 @@ p {
     animation: star 4s infinite;
     -webkit-animation: star 4s infinite; /* Safari and Chrome */
 }
+
+    /* Solen */
 
 #sun {
     position: absolute;
@@ -259,6 +233,8 @@ p {
     
 }
 
+    /* Merkur */
+
 #mercury {
     height: 15px;
     width: 15px;
@@ -268,6 +244,7 @@ p {
     z-index: 4;
 
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPBAMAAADJ+Ih5AAAABGdBTUEAALGPC/xhBQAAADBQTFRFqqWjubWzoZyZjoiFqqWiu7e1nZaToZyarqmnAAAAq6Wi2tXSurSxy8bCxL670czJ3zIDEAAAAAp0Uk5TclBQUOvj+xCAAOCI6hkAAACSSURBVAjXAYcAeP8AmZeEbeWHmZAAmTSq7M2kKZAAk2rN7O7M4ZAAdKzf7f/s/nAAjt2+u7/f/YAAXf/7u/3vzlAA6uv/u97d/aAAasv+/93+3GAAz+//3t3+ymAAWr3f/93+7lAAjOzrv73f3oAAdKzLv/3t5XAAk6rM/87qopAAmTbOzOzGKZAAmZeErsWHmZDnbFcFNI0NnwAAAABJRU5ErkJggg==);
+    /*background-size: ;*/
 
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
@@ -289,7 +266,6 @@ p {
     z-index: 0;
     top: 90%;
     left: 90%;
-    /*border: 1px solid rgba(255, 255, 255, 0.3);*/
 
     width: 275px;
     height: 275px;
@@ -306,6 +282,8 @@ p {
     animation: spin 7.5s linear infinite;
 
 }
+
+    /* Venus */
 
 #venus {
     height: 28.5px;
@@ -354,6 +332,8 @@ p {
 
 }
 
+    /* Jorden */
+
 #earth {
     height: 30px;
     width: 30px;
@@ -396,6 +376,8 @@ p {
     animation: spin 30s linear infinite;
 }
 
+    /* Månen */
+
 #moon {
     height: 8.1px;
     width: 8.1px;
@@ -433,6 +415,8 @@ p {
     -ms-animation: spin 10s linear infinite;
     animation: spin 10s linear infinite;
 }
+
+    /* Mars */
 
 #mars {
     height: 15px;
@@ -478,6 +462,8 @@ p {
     -ms-animation: spin 56.427s linear infinite;
     animation: spin 56.427s linear infinite;
 }
+
+    /* Jupiter */
 
 #jupiter {
     height: 99px;
@@ -527,8 +513,10 @@ p {
 
 }
 
+    /* Saturn */
+
 #saturn {
-    height: 80px;
+    height: 79px;
     width: 80px;
     margin-top: 15px;
     margin-left: 370px;
@@ -561,20 +549,22 @@ p {
     left: -42%; 
     position: absolute;
     transform: rotate3d(0.8, 0.2, 0, 75deg);
+
     box-sizing: border-box;
     z-index: 2;
 }
 
 .ring-after {
-    width: 199%;
+    width: 205%;
     height: 224%;
-    border: 0.2em solid rgba(160, 147, 130, 0.5);
+    border: 0.3em solid rgba(160, 147, 130, 0.5);
     border-radius: 50%;
     top: -62%; 
-    left: 36%;
-    margin-left: -69px;
+    left: 35%;
+    margin-left: -71px;
     position: absolute;
     transform: rotate3d(0.8, 0.2, 0, 75deg);
+
     box-sizing: border-box;
     z-index: 2;
 
@@ -603,6 +593,8 @@ p {
     -ms-animation: spin 885s linear infinite;
     animation: spin 885s linear infinite;
 }
+
+    /* Uranus */
 
 #uranus {
     height: 60px;
@@ -649,6 +641,8 @@ p {
     animation: spin 2520s linear infinite;
 
 }
+
+    /* Neptun */
 
 #neptune {
     height: 53px;
