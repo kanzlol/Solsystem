@@ -1,13 +1,22 @@
+var siteHeight = $(window).height();
 var siteWidth = $(window).width();
-for (i = 0; i <= 1000; i++) {
-  var start = $('<div>')
-  .addClass('star star_'+i)
-  .css({
-    top: Math.floor(Math.random()*10000),
+for (i = 0; i <= 200; i++) {
+  var start = $('<div>').addClass('star star_'+i).css({
+    top: Math.floor(Math.random()*siteHeight),
     left: Math.floor(Math.random()*siteWidth)
-  })
-  .appendTo('.stars');
+  }).appendTo('.stars');
 }
+
+$(function() {
+
+    $('#navbar a').click(function() {
+
+        $('#navbar .active').removeClass('active');
+        $(this).addClass('active');
+
+    });
+
+});
 
 $('.sun').click(function() {
 	$('#mercuryInfo, #venusInfo, #earthInfo, #marsInfo, #jupiterInfo, #saturnInfo, #uranusInfo, #neptuneInfo').hide();
@@ -54,14 +63,14 @@ $('.saturn').click(function() {
 	$('#sunInfo, #mercuryInfo, #venusInfo, #earthInfo, #marsInfo, #jupiterInfo, #uranusInfo, #neptuneInfo').hide();
 	$('#mercuryOrbit, #venusOrbit, #earthOrbit, #marsOrbit, #jupiterOrbit, #uranusOrbit, #neptuneOrbit').css("border", "");
 	$('#saturnInfo').show();
-	$('#saturnOrbit').css("border", "1px solid");
+	$('#saturnOrbit').css("border", "0.2px solid");
 });
 
 $('.uranus').click(function() {
 	$('#sunInfo, #mercuryInfo, #venusInfo, #earthInfo, #marsInfo, #jupiterInfo, #saturnInfo, #neptuneInfo').hide();
 	$('#mercuryOrbit, #venusOrbit, #earthOrbit, #marsOrbit, #jupiterOrbit, #saturnOrbit, #neptuneOrbit').css("border", "");
 	$('#uranusInfo').show();
-	$('#uranusOrbit').css("border", "1px solid");
+	$('#uranusOrbit').css("border", "0.2px solid");
 });
 
 $('.neptune').click(function() {

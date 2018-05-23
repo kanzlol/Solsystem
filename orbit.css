@@ -81,14 +81,18 @@ p {
 }
 
 
-#navbar a, #data a, #controls label {
+#navbar a {
     color: rgba(255, 255, 255, 0.6);
     display: block;
     text-decoration: none; 
 }
 
-#navbar a:hover, #data a:hover, #controls label:hover {
+#navbar a:hover {
     color: #FFF; 
+}
+
+#navbar a.active {
+    color: #FFF;
 }
 
 #navbar a {
@@ -175,9 +179,9 @@ p {
     /* Stjerner */
 
 .stars {
-  width: 100%;
-  height: 100%;
-  display: block;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .star {
@@ -519,7 +523,7 @@ p {
     height: 79px;
     width: 80px;
     margin-top: 15px;
-    margin-left: 370px;
+    margin-left: 410px;
     position: absolute;
     z-index: 4;
 
@@ -575,12 +579,12 @@ p {
     position: absolute;
     top: 60%;
     left: 60%;
-    margin-top: -685px;
-    margin-left: -685px;
+    margin-top: -735px;
+    margin-left: -735px;
     z-index: 4;
     
-    width: 1350px;
-    height: 1350px;
+    width: 1450px;
+    height: 1450px;
     
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
@@ -600,7 +604,7 @@ p {
     height: 60px;
     width: 60px;
     margin-top: 15px;
-    margin-left: 585px;
+    margin-left: 620px;
     position: absolute;
     z-index: 4;
 
@@ -622,12 +626,12 @@ p {
     position: absolute;
     top: 60%;
     left: 60%;
-    margin-top: -900px;
-    margin-left: -900px;
+    margin-top: -940px;
+    margin-left: -940px;
     z-index: 4;
     
-    width: 1800px;
-    height: 1800px;
+    width: 1900px;
+    height: 1900px;
     
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
@@ -648,7 +652,7 @@ p {
     height: 53px;
     width: 53px;
     margin-top: 15px;
-    margin-left: 755px;
+    margin-left: 757px;
     top: 20%;
     left: 60%;
     position: absolute;
@@ -672,8 +676,8 @@ p {
     position: absolute;
     top: 60%;
     left: 60%;
-    margin-top: -1260px;
-    margin-left: -1260px;
+    margin-top: -1245px;
+    margin-left: -1245px;
     z-index: 4;
     
     width: 2500px;
