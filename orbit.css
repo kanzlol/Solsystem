@@ -42,6 +42,10 @@ p {
     margin-top:90px;
 }
 
+label {
+    font-size:2.5em;
+}
+
 .description {
     color: #ffffff;
     padding:30px;
@@ -695,4 +699,43 @@ p {
     animation: spin 4944s linear infinite;
 }
 
+#MakeAPlanet {
+    /* DIY */
+    height: ;
+    width: ;
+    background: radial-gradient();
+    /*animation: sunfire 4s infinite alternate;*/
 
+
+    /* FIXED */
+    margin-top: 15px;
+    margin-left: 930px;
+    position: absolute;
+    z-index: 4;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+}
+
+
+#PlanetOrbit {
+    /* DIY */
+    animation: spin 0s linear infinite;
+
+
+
+    /* FIXED */
+    width: 2800px;
+    height: 2800px;
+    z-index: 4;
+    top: 60%;
+    left: 60%;
+    margin-top: -1460px;
+    margin-left: -1460px;
+    position: absolute;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+}
