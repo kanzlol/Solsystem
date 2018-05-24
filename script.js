@@ -79,3 +79,17 @@ $('.neptune').click(function() {
 	$('#neptuneInfo').show();
 	$('#neptuneOrbit').css("border", "0.4px solid");
 });
+
+// $('#forsvind').hover(function() {
+// 	$('#MakeAPlanet').hide();
+// },
+// function() {
+// 	$('#MakeAPlanet').show();
+// });
+
+// $('#mercury, #venus, #earth, #mars, #jupiter, #saturn, #uranus, #neptune').hover(function() {
+// 	$(this).toggle();
+// },
+// function() {
+// 	$(this).toggle();
+// });
