@@ -87,7 +87,7 @@ $('.neptune').click(function() {
 // 	$('#MakeAPlanet').show();
 // });
 
-// $('#mercury, #venus, #earth, #mars, #jupiter, #saturn, #uranus, #neptune').hover(function() {
+// $('#mercury, #venus, #earth, #mars, #jupiter, #saturn, #uranus, #neptune').click(function() {
 // 	$(this).toggle();
 // },
 // function() {
