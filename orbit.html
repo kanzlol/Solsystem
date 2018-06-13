@@ -128,59 +128,68 @@
 
                 </p>
             </div>
-        </div> 
+        </div>
+        <div id="switch">
+            <p>3D</p>
+            <label class="switch">
+                <input id="switchbox" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
 
         <!-- SOLAR SYSTEM -->
 
         <div class="stars"></div>
-        <div id="sun">
-            <div id="mercuryOrbit">
-                <div id="mercury"></div>
-            </div>
-            <div id="venusOrbit">
-                <div id="venus"></div>
-            </div>
-            <div id="earthOrbit">
-                <div id="earth"></div>
-                <div id="moonOrbit">
-                    <div id="moon"></div>
-                 </div>
-            </div>
-            <div id="marsOrbit">
-                <div id="mars"></div>
-            </div>
-            <div id="jupiterOrbit">
-                <div id="jupiter"></div>
-            </div>
-            <div id="saturnOrbit">
-                <div id="saturn">
-                    <div class="ring"></div>
-                    <div class="ring-after"></div>
+       <div id="galaxy" class="galaxy">
+            <div class="sun" id="sun"></div>
+                <div id="mercuryOrbit" class="mercuryOrbit">
+                    <div class="mercury" id="mercury"></div>
                 </div>
-            </div>
-            <div id="uranusOrbit">
-                <div id="uranus"></div>
-            </div>
-            <div id="neptuneOrbit">
-                <div id="neptune"></div>
-            </div>
-            <div id="PlanetOrbit">
-                <div id="MakeAPlanet"></div>
-            </div>
+                <div id="venusOrbit" class="venusOrbit">
+                    <div id="venus" class="venus"></div>
+                </div>
+                <div id="earthOrbit">
+                    <div id="earth" class="earth"></div>
+                    <div id="moonOrbit">
+                        <div id="moon" class="moon"></div>
+                     </div>
+                </div>
+                <div id="marsOrbit">
+                    <div id="mars" class="mars"></div>
+                </div>
+                <div id="jupiterOrbit" class="jupiterOrbit">
+                    <div id="jupiter" class="jupiter"></div>
+                </div>
+                <div id="saturnOrbit">
+                    <div id="saturn" class="saturn">
+                        <div class="ring" id="ring"></div>
+                        <div class="ring-after" id="ring-after"></div>
+                    </div>
+                </div>
+                <div id="uranusOrbit">
+                    <div id="uranus" class="uranus"></div>
+                </div>
+                <div id="neptuneOrbit">
+                    <div id="neptune" class="neptune"></div>
+                </div>
+                <div id="PlanetOrbit">
+                    <div id="MakeAPlanet"></div>
+                </div>
         </div>
+   
 
         <!-- Nav -->
 
         <div id="navbar">
-            <a class="sun" title="sun" href="#">Solen</a>
-            <a class="mercury" title="mercury" href="#">Merkur</a>
-            <a class="venus" title="venus" href="#">Venus</a>
-            <a class="earth" title="earth" href="#">Jorden</a>
-            <a class="mars" title="mars" href="#">Mars</a>
-            <a class="jupiter" title="jupiter" href="#">Jupiter</a>
-            <a class="saturn" title="saturn" href="#">Saturn</a>
-            <a class="uranus" title="uranus" href="#">Uranus</a>
-            <a class="neptune" title="neptune" href="#">Neptun</a>
+            <a class="sunNav" title="sun" href="#">Solen</a>
+            <a class="mercuryNav" title="mercury" href="#">Merkur</a>
+            <a class="venusNav" title="venus" href="#">Venus</a>
+            <a class="earthNav" title="earth" href="#">Jorden</a>
+            <a class="marsNav" title="mars" href="#">Mars</a>
+            <a class="jupiterNav" title="jupiter" href="#">Jupiter</a>
+            <a class="saturnNav" title="saturn" href="#">Saturn</a>
+            <a class="uranusNav" title="uranus" href="#">Uranus</a>
+            <a class="neptuneNav" title="neptune" href="#">Neptun</a>
         </div>
         <!-- JS -->
         <script src="jquery-3.2.1.js"></script>

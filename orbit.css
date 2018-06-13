@@ -1,10 +1,9 @@
 html, body {
-    /* The universe takes up all available space */
     width: 100%;
     height: 100vh;
-    overflow:hidden;
+    /*overflow:hidden;*/
 
-    /* The universe is black */
+
     background-color: black;
     background: black;
     background: -webkit-radial-gradient(#555, #000);
@@ -37,17 +36,20 @@ hr {
     opacity:.1;
  }
 
-p {
+.description p {
     font-size:2.5em;
     margin-top:90px;
 }
 
-label {
+.infos p {
+    font-size:2.5em;
+    margin-top:90px;
+}
+
+/*label {
     font-size:2.5em;
     position:absolute;
-    top: 50%;
-    left: 50%;
-}
+}*/
 
 .description {
     color: #ffffff;
@@ -74,6 +76,8 @@ label {
     -o-animation: fadein 3s;
     animation: fadein 3s;
 }
+
+    /* Nav */
 
 #navbar {
     position: absolute;
@@ -109,6 +113,77 @@ label {
     padding: 16px;
     font-size: 4em;
     display: inline-block;
+}
+
+    /* Switch */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #555;
+    -webkit-transition: .4;
+    transition: .4;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 2px;
+}
+
+.slider:before {
+    position: absolute;
+    background-color: #CCC;
+    content: "";
+    height: 34px;
+    width: 34px;
+    left: 4px;
+    bottom: 4px;
+    -webkit-transition: .4;
+    transition: .4;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#switch {
+    width: 5%;
+    position: absolute;
+    left: 95%;
+    top: 55%;
+    z-index: 999;
+}
+
+.switch {
+    width: 6em;
+    height: 2.5em;
+    position: absolute;
+    z-index: 999;
+}
+
+.switch input {
+    display: none;
+}
+
+input:checked + .slider {
+  background-color: #555;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #555;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(3.5em);
+  -ms-transform: translateX(3.5em);
+  transform: translateX(3.5em);
+}
+
+#switch p {
+    font-size: 2.5em
 }
 
     /* Animationer */
@@ -171,7 +246,51 @@ label {
   }
 }
 
+@keyframes spinThreeD {
+  0%   { transform: rotateZ(0deg); }
+  100% { transform: rotateZ(-360deg); } 
+}
+/*
+@-webkit-keyframes spinThreeD {
+  100% {
+    -webkit-transform: rotateY(360deg);
+       -moz-transform: rotateY(360deg);
+        -ms-transform: rotateY(360deg);
+         -o-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}*/
 
+@keyframes stay {
+  0%   { transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg); }
+  100% { transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg); } 
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: inset 40px -10px 16px rgba(0, 0, 0, 0.5);
+    }
+
+  25% {
+    box-shadow: inset -40px -100px 20px rgba(0, 0, 0, 0.5);
+    }
+
+/*  50% {
+    box-shadow: inset -40px -40px 24px rgba(0, 0, 0, 0.5);
+    }*/
+
+  50.01% {
+    box-shadow: inset -40px -60px 16px rgba(0, 0, 0, 0.5);
+    }
+
+  75% {
+    box-shadow: inset -16px 0 8px rgba(0, 0, 0, 0.5);
+    }
+    
+  100% {
+    box-shadow: inset 40px -20px 16px rgba(0, 0, 0, 0.5);
+    }    
+}
 
 @keyframes star {  
     0% {opacity: 0.2;}
@@ -212,9 +331,17 @@ label {
     -webkit-animation: star 4s infinite; /* Safari and Chrome */
 }
 
+.galaxy {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: rotateX(75deg);
+    transform-style: preserve-3d;
+}
+
     /* Solen */
 
-#sun {
+.sun {
     position: absolute;
     z-index: 4;
     top: 50%;
@@ -223,6 +350,41 @@ label {
     margin-left: -100px;
     height: 250px;
     width: 250px;
+
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    background: orange;
+    background: -webkit-radial-gradient(#f5c313, #ec7e08);
+    background: -moz-radial-gradient(#f5c313, #ec7e08);
+    background: -o-radial-gradient(#f5c313, #ec7e08);
+    background: radial-gradient(#f5c313, #ec7e08);
+    
+    -webkit-box-shadow: 0 0 50px #f5c91a;
+    -moz-box-shadow: 0 0 50px #f5c91a;
+    -o-box-shadow: 0 0 50px #f5c91a;
+    box-shadow: 0 0 50px #f5c91a;
+    
+    -webkit-animation: sunfire 4s infinite alternate;
+    -moz-animation: sunfire 4s infinite alternate;
+    -o-animation: sunfire 4s infinite alternate;
+    animation: sunfire 4s infinite alternate;   
+}
+
+.sun3d {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -300px;
+    height: 700px;
+    width: 700px;
+    transform-style: preserve-3d;
+    transform: rotateX(-75deg);
+
+
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     -o-border-radius: 100%;
@@ -242,13 +404,11 @@ label {
     -moz-animation: sunfire 4s infinite alternate;
     -o-animation: sunfire 4s infinite alternate;
     animation: sunfire 4s infinite alternate;
-    
-    
 }
 
     /* Merkur */
 
-#mercury {
+.mercury {
     height: 15px;
     width: 15px;
     margin-top: 15px;
@@ -256,8 +416,8 @@ label {
     position: absolute;
     z-index: 4;
 
+
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPBAMAAADJ+Ih5AAAABGdBTUEAALGPC/xhBQAAADBQTFRFqqWjubWzoZyZjoiFqqWiu7e1nZaToZyarqmnAAAAq6Wi2tXSurSxy8bCxL670czJ3zIDEAAAAAp0Uk5TclBQUOvj+xCAAOCI6hkAAACSSURBVAjXAYcAeP8AmZeEbeWHmZAAmTSq7M2kKZAAk2rN7O7M4ZAAdKzf7f/s/nAAjt2+u7/f/YAAXf/7u/3vzlAA6uv/u97d/aAAasv+/93+3GAAz+//3t3+ymAAWr3f/93+7lAAjOzrv73f3oAAdKzLv/3t5XAAk6rM/87qopAAmTbOzOzGKZAAmZeErsWHmZDnbFcFNI0NnwAAAABJRU5ErkJggg==);
-    /*background-size: ;*/
 
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
@@ -272,7 +432,28 @@ label {
 
 }
 
-#mercuryOrbit {
+.mercury3d {
+    height: 15px;
+    width: 15px;
+    margin-top: 15px;
+    margin-left: 53px;
+    position: absolute;
+    z-index: 4;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPBAMAAADJ+Ih5AAAABGdBTUEAALGPC/xhBQAAADBQTFRFqqWjubWzoZyZjoiFqqWiu7e1nZaToZyarqmnAAAAq6Wi2tXSurSxy8bCxL670czJ3zIDEAAAAAp0Uk5TclBQUOvj+xCAAOCI6hkAAACSSURBVAjXAYcAeP8AmZeEbeWHmZAAmTSq7M2kKZAAk2rN7O7M4ZAAdKzf7f/s/nAAjt2+u7/f/YAAXf/7u/3vzlAA6uv/u97d/aAAasv+/93+3GAAz+//3t3+ymAAWr3f/93+7lAAjOzrv73f3oAAdKzLv/3t5XAAk6rM/87qopAAmTbOzOzGKZAAmZeErsWHmZDnbFcFNI0NnwAAAABJRU5ErkJggg==);
+
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    box-shadow: 0.2px 0.5px #555;
+
+    animation: stay 7.5s linear infinite;
+}
+
+.mercuryOrbit {
     position: absolute;
     margin-top: -240px;
     margin-left: -240px;
@@ -296,9 +477,28 @@ label {
 
 }
 
+.mercuryOrbit3d {
+    position: absolute;
+    margin-left: -500px;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    height: 1000px;
+
+    border-radius: 50%;
+    box-sizing: border-box;
+    z-index: 1;
+
+    -webkit-animation: spinThreeD 7.5s linear infinite;
+    -moz-animation: spinThreeD 7.5s linear infinite;
+    -o-animation: spinThreeD 7.5s linear infinite;
+    -ms-animation: spinThreeD 7.5s linear infinite;
+    animation: spinThreeD 7.5s linear infinite;
+}
+
     /* Venus */
 
-#venus {
+.venus {
     height: 28.5px;
     width: 28.5px;
     margin-top: 15px;
@@ -321,7 +521,27 @@ label {
 
 }
 
-#venusOrbit {
+.venus3d {
+    height: 28.5px;
+    width: 28.5px;
+    margin-top: 15px;
+    margin-left: 75px;
+    position: absolute;
+    z-index: 2;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAABGdBTUEAALGPC/xhBQAAAGBQTFRFnHlVuYpjfWdJpX5aqoFcu4xkm3lWjnFQj3JQdmNFhGxMk3RSmXhUqoFcq4JdgGlKr4VelHVSim9OvIxkon1ZvIxkvIxkvIxkvIxkvIxkvIxkvIxkvIxkvIxkAAAAvIxkls4uvQAAACB0Uk5Tm/1srVqO0Ycro9cNHcDU6ezowbzpv8Lgx8zq5dLbAOwHjDEIAAAB2UlEQVQoz12TiZbqMAiG49Zq16TZIAF5/7e8pLXOzMVjPfEr8EPAvE+b7g9fBGO63afvn+aEjxg51ZovJLz0z7/4AQk5FmYWNfLz9RceE2LKQkBCIlkwpWDGE49JsBR1IqkgtfkLhNv4wamdSymZcgIPO5YlbAd+6AFzjoBECSKwZA0lwfUNP/eXiQCIqQoCE2gCssE9FT+OYFoPqru0H9Aima17vc10UInY3HPBijH6iAJLcJO5f3CJCUBDFwCtC6RUDNvd+BNLSlgoJaoAiUplO2+90XYcwXPOFRGlUkvSLGyb4fSRBj5mxlqYmGvV0mpwqzm63Iw5A9TMKaZWt2jw1cgvQypau5TjlGYNjuUHq3Qp55kuLbePtdlFsj5V74E1I83d8DI6BtH7jJK91zuve4PJs6Z2iu+FPO36kteaFTPo61mvzK1XM3HxdGTLgE0W7wnssq3rZN63E2thfOhCjWFV2KtdqG09azMkPn+agErdsLYLffdWSJVXbeW3RBu6Ybgew3Rb2NfK+ily9ER9t2E7R9HMMxChDqo06XbpNk08fgfZdMuiHBVbq65uXV/jrzXouy4swS52CTtc+79L9Ow351yn3wZf/y1R27LrNqxDY9efFfwHiRFWry5LGJMAAAAASUVORK5CYII=);
+
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+
+    animation: stay 9.6s linear infinite;
+}
+
+.venusOrbit {
     position: absolute;
     margin-top: -290px;
     margin-left: -290px;
@@ -345,9 +565,28 @@ label {
 
 }
 
+.venusOrbit3d {
+    position: absolute;
+    margin-left: -750px;
+    top: 50%;
+    left: 50%;
+    width: 1500px;
+    height: 1000px;
+
+    border-radius: 50%;
+    box-sizing: border-box;
+    z-index: 2;
+
+    -webkit-animation: spinThreeD 9.6s linear infinite;
+    -moz-animation: spinThreeD 9.6s linear infinite;
+    -o-animation: spinThreeD 9.6s linear infinite;
+    -ms-animation: spinThreeD 9.6s linear infinite;
+    animation: spinThreeD 9.6s linear infinite;
+}
+
     /* Jorden */
 
-#earth {
+.earth {
     height: 30px;
     width: 30px;
     position: absolute;
@@ -367,7 +606,11 @@ label {
     animation: spin 20s linear infinite;
 }
 
-#earthOrbit {   
+.earth3d {
+
+}
+
+.earthOrbit {   
     position: absolute;
     top: 50%;
     left: 50%;
@@ -392,7 +635,7 @@ label {
 
     /* Månen */
 
-#moon {
+.moon {
     height: 8.1px;
     width: 8.1px;
     background: gray;
@@ -405,6 +648,10 @@ label {
     -moz-border-radius: 100%;
     -o-border-radius: 100%;
     border-radius: 100%;
+}
+
+.moon3d {
+
 }
 
 #moonOrbit {
@@ -431,7 +678,7 @@ label {
 
     /* Mars */
 
-#mars {
+.mars {
     height: 15px;
     width: 15px;
     margin-top: 15px;
@@ -453,7 +700,11 @@ label {
     animation: spin 30s linear infinite;
 }
 
-#marsOrbit {
+.mars3d {
+
+}
+
+.marsOrbit {
     position: absolute;
     top: 60%;
     left: 60%;
@@ -478,7 +729,7 @@ label {
 
     /* Jupiter */
 
-#jupiter {
+.jupiter {
     height: 99px;
     width: 99px;
     margin-top: 15px;
@@ -502,13 +753,35 @@ label {
     animation: spin 50s linear infinite;
 }
 
-#jupiterOrbit {
+.jupiter3d {
+    height: 99px;
+    width: 99px;
+    margin-top: 15px;
+    margin-left: 210px;
+    position: absolute;
+    z-index: 5;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    box-shadow: 0.2px 0.5px #555;
+
+    background-image: url(data:image/png;base64,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);
+
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+
+    animation: stay 55.854s linear infinite, shadow 55.854s linear infinite;
+}
+
+.jupiterOrbit {
     position: absolute;
     top: 60%;
     left: 60%;
     margin-top: -520px;
     margin-left: -520px;
     z-index: -5;
+    transform-style: preserve-3d;
     
     width: 1000px;
     height: 1000px;
@@ -516,7 +789,7 @@ label {
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     -o-border-radius: 100%;
-    border-radius: 100%;
+    border-radius: 50%;
 
     -webkit-animation: spin 355.854s linear infinite;
     -moz-animation: spin 355.854s linear infinite;
@@ -526,9 +799,29 @@ label {
 
 }
 
+.jupiterOrbit3d {
+    position: absolute;
+    margin-left: -1200px;
+    top: 45%;
+    left: 50%;
+    width: 2500px;
+    height: 1000px;
+    transform-style: preserve-3d;
+
+    border-radius: 50%;
+    box-sizing: border-box;
+    z-index: 7;
+
+    -webkit-animation: spinThreeD 355.854s linear infinite;
+    -moz-animation: spinThreeD 355.854s linear infinite;
+    -o-animation: spinThreeD 355.854s linear infinite;
+    -ms-animation: spinThreeD 355.854s linear infinite;
+    animation: spinThreeD 55.854s linear infinite;
+}
+
     /* Saturn */
 
-#saturn {
+.saturn {
     height: 79px;
     width: 80px;
     margin-top: 15px;
@@ -553,6 +846,10 @@ label {
     animation: spin 885s linear infinite;
 }
 
+.saturn3d {
+
+}
+
 .ring {
     width: 185%;
     height: 185%;
@@ -565,6 +862,10 @@ label {
 
     box-sizing: border-box;
     z-index: 2;
+}
+
+.ring3d {
+
 }
 
 .ring-after {
@@ -583,8 +884,11 @@ label {
 
 }
 
+.ring-after3d {
 
-#saturnOrbit {
+}
+
+.saturnOrbit {
     position: absolute;
     top: 60%;
     left: 60%;
@@ -609,7 +913,7 @@ label {
 
     /* Uranus */
 
-#uranus {
+.uranus {
     height: 60px;
     width: 60px;
     margin-top: 15px;
@@ -631,7 +935,11 @@ label {
     animation: spin 50s linear infinite;
 }
 
-#uranusOrbit {
+.uranus3d {
+
+}
+
+.uranusOrbit {
     position: absolute;
     top: 60%;
     left: 60%;
@@ -657,7 +965,7 @@ label {
 
     /* Neptun */
 
-#neptune {
+.neptune {
     height: 53px;
     width: 53px;
     margin-top: 15px;
@@ -681,7 +989,11 @@ label {
     animation: spin 50s linear infinite;
 }
 
-#neptuneOrbit {
+.neptune3d {
+
+}
+
+.neptuneOrbit {
     position: absolute;
     top: 60%;
     left: 60%;
@@ -702,59 +1014,4 @@ label {
     -o-animation: spin 4944s linear infinite;
     -ms-animation: spin 4944s linear infinite;
     animation: spin 4944s linear infinite;
-}
-
-#MakeAPlanet {
-    /* DIY */
-    height: ;
-    width: ;
-    background: radial-gradient();
-    /*animation: sunfire 4s infinite alternate;*/
-
-
-    /* FIXED */
-    margin-top: 15px;
-    margin-left: 930px;
-    position: absolute;
-    z-index: 4;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -o-border-radius: 100%;
-    border-radius: 100%;
-}
-
-
-#PlanetOrbit {
-    /* DIY */
-    animation: spin 0s linear infinite;
-
-
-
-    /* FIXED */
-    width: 2800px;
-    height: 2800px;
-    z-index: -9;
-    top: 60%;
-    left: 60%;
-    margin-top: -1460px;
-    margin-left: -1460px;
-    position: absolute;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -o-border-radius: 100%;
-    border-radius: 100%;
-}
-
-#forsvind {
-    height: ;
-    width: ;
-    margin-top: 15px;
-    margin-left: 930px;
-    position: absolute;
-    z-index: 999;
-
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -o-border-radius: 100%;
-    border-radius: 100%;
 }
